@@ -1,0 +1,34 @@
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://url-amazon:3306/rest_with_spring_boot_udemy?useTimezone=true&serverTimezone=UTC&useSSL=false
+        username: docker
+        password: docker123
+
+    jackson:
+        default-property-inclusion: NON_NULL
+
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+        hibernate:
+            ddl-auto: update
+        show-sql: false
+
+    servlet:
+        multipart:
+            enabled: true
+            file-size-threshold: 2KB
+            max-file-size: 200MB
+            max-request-size: 215MB
+
+flyway:
+    url: jdbc:mysql://url-amazon:3306/
+    schemas: rest_with_spring_boot_udemy
+    user: docker
+    password: docker123
+
+file:
+    upload-dir: /Programacao/Spring/UdemySpringBoot/UploadDir
